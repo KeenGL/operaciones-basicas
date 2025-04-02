@@ -42,8 +42,8 @@ class CalculadoraPromedio:
 
 # Definición de variables globales
 NUMEROS = [1, 2, 3, 4, 5]
-NUM1 = 10
-NUM2 = 20
+NUM1 = 20
+NUM2 = 40
 
 # Ejecución principal
 if __name__ == "__main__":

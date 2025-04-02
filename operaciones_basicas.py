@@ -1,34 +1,46 @@
-# Este script contiene errores comunes que violan las normas PEP 8
+"""
+Módulo que contiene clases para realizar operaciones básicas y calcular promedios.
+"""
+
 
 class OperacionesBasicas:
+    """Clase que realiza operaciones matemáticas básicas como suma y resta."""
+
     def __init__(self):
+        """Inicializa el resultado en 0."""
         self.resultado = 0
 
     def sumar(self, a, b):
-        """Esta función suma dos números"""
+        """Suma dos números y almacena el resultado."""
         self.resultado = a + b
 
     def restar(self, a, b):
-        """Esta función resta dos números"""
+        """Resta dos números y almacena el resultado."""
         self.resultado = a - b
 
     def obtener_resultado(self):
+        """Devuelve el resultado de la última operación realizada."""
         return self.resultado
 
 
 class CalculadoraPromedio:
+    """Clase para calcular el promedio de una lista de valores."""
+
     def __init__(self, valores):
+        """Inicializa la calculadora con una lista de valores."""
         self.valores = valores
 
     def calcular_promedio(self):
-        suma = 0
-        for valor in self.valores:
-            suma += valor
-        promedio = suma / len(self.valores)
-        return promedio
+        """Calcula y devuelve el promedio de los valores almacenados."""
+        suma_total = sum(self.valores)
+        return suma_total / len(self.valores) if self.valores else 0
+
+    def obtener_valores(self):
+        """Devuelve la lista de valores almacenados."""
+        return self.valores
 
 
-# Variables globales
+# Definición de variables globales
 NUMEROS = [1, 2, 3, 4, 5]
 NUM1 = 10
 NUM2 = 20
